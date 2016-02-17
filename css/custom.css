@@ -1,0 +1,30 @@
+body
+{
+	background-color: #def2fd;
+	max-width: 80%;
+}
+
+#someStuff
+{
+	text-align: center;
+	font-size: 300%;
+}
+
+#firstP
+{
+	text-align: center;
+	font-size: 150%;
+	color: grey;
+}
+
+#content
+{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#map 
+{
+	height: 600px;
+	max-width: 70%;
+}
