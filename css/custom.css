@@ -17,23 +17,26 @@
     margin: 0 auto;
 }
 
+/*
 #lama
 {
 	max-width: 100%;
 	border: 2px solid black;
 	border-radius: 3px;
 }
+*/
 
 #map
 {
-	height: 600px;
-	max-width: 600px;
+	height: 700px;
+	max-width: 900px;
 	margin-right: auto;
 	margin-left: auto;
 	border: 2px solid black;
 	border-radius: 3px;
 }
 
+/*
 #lamaPen
 {
 	height: 600px;
@@ -42,4 +45,5 @@
 	margin-left: auto;	
 	padding: 20px;
 }
+*/
 
