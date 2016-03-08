@@ -20,7 +20,7 @@ getData(map);
 function createPropSymbols(data,map)
 {
 	// use pop_2015 to create proportional symbols
-	var attribute = "construction";
+	var attribute = "agg2014";
 
 	// create markers with cool options
 	var geojsonMarkers = 
@@ -76,7 +76,7 @@ function calculatePropRadius(attributeValue)
 function getData(map)
 {
 	// get the data from the geojson file
-	$.ajax("data/industry2008.geojson",
+	$.ajax("data/agg.geojson",
 	{
 		dataType: "json",
 		success: function(response)
