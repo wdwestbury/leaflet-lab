@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Wisco Bill's Awesome Page</title>
+    <title>Recovery from the Great Recession</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,89 +33,93 @@
 <body>
 
 
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Industry In Crisis</a>
-            </div>
-
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li>
-                        <a id="agriculture">Agriculture</a>
-                    </li>
-                    <li>
-                        <a id='arts'>Arts</a>
-                    </li>
-                    <li>
-                        <a id='construction'>Construction</a>
-                    </li>
-                    <li>
-                        <a id='education'>Eductaion</a>
-                    </li>
-                    <li>
-                        <a id="finance">Finance</a>
-                    </li>
-                    <li>
-                        <a id='information'>Information</a>
-                    </li>
-                    <li>
-                        <a id='manufacturing'>Manufacturing</a>
-                    </li>
-                    <li>
-                        <a id='professional'>Professional</a>
-                    </li>
-                    <li>
-                        <a id='public'>Public Administration</a>
-                    </li>
-                    <li>
-                        <a id="retail">Retail</a>
-                    </li>
-                    <li>
-                        <a id='transportation'>Transportation</a>
-                    </li>
-                    <li>
-                        <a id="wholesale">Wholesale Retail</a>
-                    </li>
-                    <li>
-                        <a id='other'>Other</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
-
         <!-- map container -->
         <div id="map"></div>
 
         <!-- pannel container -->
         <div id='panel'>
+            <div>
+                <h2 class="panelText">
+                    Recession & Recovery
+                </h2>
+            </div>
 
-            <h5>Slide to see the workfore percentage for an industry by year</h3>
+            <div>
+                <p class="panelText">
+                    From December 2007 to 2009, the U.S . entered into one of the worst recessions since the great depression, now known as the Great Recession. Unemployment rose throughout the United States and recovery was slow across many sectors. This map shows recovery by industry for 13 industry sectors across 98 U.S. metro areas. Choose an industry to explore and sequence through time to see the change, or select a date range to compare growth for a given industry.
+                </p>
+            </div>
+
+            <div class="input-group">
+                <input id="chosenIndustry" class="form-control" type="text" placeholder="Choose an industry"></input>
+                <div class="input-group-btn">
+                    <button class="btn dropdown-toggle btn-primary years" type="button" data-toggle="dropdown">Industry
+                        <span class="caret"></span>
+                    </button>
+                        <ul id="Industry" class="dropdown-menu">
+                            <li>
+                                <a href="#" id="agriculture">Agriculture</a>
+                            </li>
+                            <li>
+                                <a href="#" id='arts'>Arts</a>
+                            </li>
+                            <li>
+                                <a id='construction'>Construction</a>
+                            </li>
+                            <li>
+                                <a id='education'>Eductaion</a>
+                            </li>
+                            <li>
+                                <a id="finance">Finance</a>
+                            </li>
+                            <li>
+                                <a id='information'>Information</a>
+                            </li>
+                            <li>
+                                <a id='manufacturing'>Manufacturing</a>
+                            </li>
+                            <li>
+                                <a id='professional'>Professional</a>
+                            </li>
+                            <li>
+                                <a id='public'>Public Administration</a>
+                            </li>
+                            <li>
+                                <a id="retail">Retail Trade</a>
+                            </li>
+                            <li>
+                                <a id='transportation'>Transportation</a>
+                            </li>
+                            <li>
+                                <a id="wholesale">Wholesale Trade</a>
+                            </li>
+                            <li>
+                                <a id='other'>Other Industry</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+
+
+
+            <h3 class="panelText industryName"><b></b></h3>
+            <p class="panelText" id="currentYear"><p>
+            <h5 class="panelText">Slide to see the workfore percentage for the <span class="industryName"></span> industry by year.</h3>
             <div id="sliderStuff">
-                <input id="range" class='range-slider'  type="range">
+                <input id="range" class='range-slider round'  type="range">
 
-                <button class="bt btn-default skip" id="reverse" >
-                    <span class="glyphicon glyphicon-step-backward glyphicon-align-left" aria-hidden="true"></span>
+                <button class="btn btn-default btn-primary skip" id="reverse" >
+                    <span class="glyphicon glyphicon-step-backward glyphicon-align-left skipper" aria-hidden="true"></span>
                 </button>
 
-                <button class="bt btn-default skip" id="forward" >
+                <button class="btn btn-default btn-primary skip" id="forward" >
                     <span class="glyphicon glyphicon-step-forward glyphicon-align-left" aria-hidden="true"></span>
                 </button>
             </div>
 
             <br />
 
-            <h5>Choose years to see the percentage of change in the growth or reduction of an industry over time</h5>
+            <h5 class="panelText">Choose years to see the percentage of change in the growth or reduction in the<span class="industryName"></span> industry over time. Blue is growth, red is decline.</h5>
             <div id="yearCalculator">
                 <div class="input-group">
                     <input id="yearOne"class="form-control" type="text" placeholder="Choose a year"></input>
@@ -158,24 +162,15 @@
             
             <br /> 
 
-            <button id="years" class="btn btn-primary">Submit</button>
-
-
-
-
+            <button id="years" class="btn btn-primary yearButton">compare</button>
         </div>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="lib/bootstrap.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <!--
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
--->
-        <!-- <script type="text/javascript" src="js/tutorials.js"></script> -->
-        <script type="text/javascript" src="js/custom.js"></script>
+    <!-- <script type="text/javascript" src="js/tutorials.js"></script> -->
+    <script type="text/javascript" src="js/custom.js"></script>
+<!-- body end-->
 </body>
 
 </html>
